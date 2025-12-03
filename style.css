@@ -1,113 +1,87 @@
 body {
-  background: radial-gradient(circle, #000000, #1a1a1a, #333333);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    background: radial-gradient(circle, #000000, #1a1a1a, #333333);
+    justify-content: center;
+    align-items: center;
 }
 
-.logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+img {
+    position: absolute;
+    height: min(25vh, 25vw);
+    width: min(25vh, 25vh);
+    top: 20px;
+    left: 20px;
+    object-fit: contain;
 }
 
-.box {
-  width: min(80vw, 80vh);; /* tamanho fixo para quadrado perfeito */
-  height: min(80vw, 80vh);;
-  background-color: #ffffff;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+.login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    height: min(80vh, 80vw);
+    width: min(80vh, 80vw);
+    background-color: rgb(255, 255, 255);
+    border-radius: min(3vh, 3vw);
+    padding-top: 20px;
 }
 
-.box:hover {
-  transform: translateY(-5px);
+.login h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: min(7vh, 7vw);
+    color: #111;
+    margin: min(3vh, 3vw);
+    text-align: center;
 }
 
-.box h1 {
-  font-size: 2rem;
-  color: #111;
-  margin: 0 0 10px 0;
-  text-align: center;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  margin-bottom: 10px;
-}
-
-.input-group h2 {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  color: #333;
-  text-align: center;
-}
-
-.box input {
-  width: 100%;
-  height: 40px;
-  border-radius: 10px;
-  border: 1.5px solid #888;
-  padding: 0 10px;
-  font-size: 1rem;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-.box input:focus {
-  border-color: #000;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-}
-
-.box button {
-  width: 60%;
-  height: 45px;
-  border-radius: 12px;
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: #000;
-  color: #fff;
-  margin-top: 15px;
-  transition: all 0.3s ease;
-}
-
-.box button:hover {
-  background-color: #222;
+.login h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: min(3vh, 3vw);
+    color: #333333;
+    margin: 0;
+    margin-top: min(3vh, 3vw);
+    text-align: left;
 }
 
 .links {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin-top: 10px;
+  justify-content: center;
+  gap: min(25vh, 25vw); /* espaço entre os links */
+  margin-top: min(3vh, 3vw);
 }
 
 .links a {
+  font-family: 'Arial', sans-serif;
+  font-size: min(3vh, 3vw);
+  color: #333333;
   text-decoration: none;
-  font-size: 0.85rem;
-  padding: 5px 10px;
-  border-radius: 6px;
-  background-color: #eee;
-  color: #000;
-  transition: all 0.2s ease;
 }
 
-.links a:hover {
-  background-color: #ccc;
+.login input {
+  width: min(70vh, 70vw);
+  height: min(5vh, 5vw);
+  text-align: center;
+  font-size: min(3vh, 3vw);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1.5px solid #888;
+  border-radius: min(2vh, 2vw);
+}
+
+.login button {
+  width: min(40vh, 40vw);
+  height: min(5vh, 5vw);
+  font-size: min(3vh, 3vw);
+  border-radius: min(2vh, 2vw);
+  border: none;
+
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  margin-top: min(3vh, 3vw);
+  transition: all 0.3s ease;
 }

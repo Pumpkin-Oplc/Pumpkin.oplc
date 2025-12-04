@@ -1,6 +1,6 @@
 body {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     margin: 0;
     display: flex;
     background: radial-gradient(circle, #000000, #1a1a1a, #333333);
@@ -10,8 +10,8 @@ body {
 
 img {
     position: absolute;
-    height: min(25vh, 25vw);
-    width: min(25vh, 25vh);
+    height: 100px;
+    width: 100px;
     top: 20px;
     left: 20px;
     object-fit: contain;
@@ -23,66 +23,68 @@ img {
     flex-direction: column;
     justify-content: flex-start; 
     align-items: center;
-    height: min(80vh, 80vw);
-    width: min(80vh, 80vw);
+    width: 90%;
+    max-width: 400px;
     background-color: rgb(255, 255, 255);
-    border-radius: min(3vh, 3vw);
-    padding-top: 20px;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .login h1 {
     font-family: 'Arial', sans-serif;
-    font-size: min(7vh, 7vw);
+    font-size: 2rem;
     color: #111;
-    margin: min(1vh, 1vw);
+    margin: 10px 0;
     text-align: center;
 }
 
 .login h3 {
     font-family: 'Arial', sans-serif;
-    font-size: min(3vh, 3vw);
+    font-size: 1rem;
     color: #333333;
-    margin: 0;
-    margin-top: min(1vh, 1vw);
+    margin: 10px 0 0 0;
     text-align: left;
+    width: 100%;
 }
 
 .links {
-  display: flex;
-  justify-content: center;
-  gap: min(25vh, 25vw); /* espaço entre os links */
-  margin-top: min(3vh, 3vw);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
 .links a {
-  font-family: 'Arial', sans-serif;
-  font-size: min(3vh, 3vw);
-  color: #333333;
-  text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333333;
+    text-decoration: none;
 }
 
 .login input {
-  width: min(70vh, 70vw);
-  height: min(5vh, 5vw);
-  text-align: center;
-  font-size: min(3vh, 3vw);
-  padding: 10px;
-  margin: 10px 0;
-  border: 1.5px solid #888;
-  border-radius: min(2vh, 2vw);
+    width: 90%;
+    max-width: 350px;
+    height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border: 1.5px solid #888;
+    border-radius: 5px;
 }
 
 .login button {
-  width: min(40vh, 40vw);
-  height: min(5vh, 5vw);
-  font-size: min(3vh, 3vw);
-  border-radius: min(2vh, 2vw);
-  border: none;
-
-  font-weight: bold;
-  cursor: pointer;
-  background-color: #000;
-  color: #fff;
-  margin-top: min(3vh, 3vw);
-  transition: all 0.3s ease;
+    width: 50%;
+    max-width: 200px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    margin-top: 15px;
+    transition: all 0.3s ease;
 }

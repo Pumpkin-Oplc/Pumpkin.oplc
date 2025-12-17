@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0754e85f6e6f7f3f2f54a5dbb7982e7d646990543b349e241ae90ec0b3b67c9b
-size 197
+extends TextureButton
+
+@export var cena_alvo: String = "res://Cenas/Game/Game.tscn"
+
+func _ready():
+	pressed.connect(_trocar_cena)
+
+func _trocar_cena():
+	get_tree().change_scene_to_file(cena_alvo)

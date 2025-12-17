@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://c87jo1i3hcpb1"]
+
+[ext_resource type="Texture2D" uid="uid://c4cfpel1gii85" path="res://Arquivos/img/Gemeas.png" id="1_b0xvb"]
+[ext_resource type="Texture2D" uid="uid://o7rd7aq5m61i" path="res://Arquivos/img/aviao.png" id="1_gwxeu"]
+[ext_resource type="Script" uid="uid://bhe0k8u4dm0dl" path="res://Cenas/Inicio/Script/inicio.gd" id="1_tb1jo"]
+[ext_resource type="Texture2D" uid="uid://g4r6svx77160" path="res://Arquivos/img/Nuvem.png" id="2_p5few"]
+[ext_resource type="Script" uid="uid://b6otyw0qfbmxs" path="res://Cenas/Inicio/Script/aviao.gd" id="3_b0xvb"]
+[ext_resource type="Texture2D" uid="uid://bckjdugjqpokm" path="res://Arquivos/img/Botao-Play.png" id="3_y7txy"]
+[ext_resource type="Script" uid="uid://clfqpt60xxrvb" path="res://Cenas/Inicio/Script/Botao-Play.gd" id="4_hqril"]
+[ext_resource type="Texture2D" uid="uid://dbwcq78acbpkv" path="res://Arquivos/img/lost.png" id="6_a4x42"]
+[ext_resource type="Script" uid="uid://ctee62gddmnqt" path="res://Cenas/Inicio/Script/Lost.gd" id="7_tb1jo"]
+[ext_resource type="Script" uid="uid://f1utbjc26yby" path="res://Cenas/Inicio/Script/label.gd" id="8_w8u27"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tb1jo")
+
+[node name="Fundo" type="Node2D" parent="."]
+
+[node name="Cor-Ceu" type="ColorRect" parent="Fundo"]
+offset_right = 1350.0
+offset_bottom = 650.0
+color = Color(0.11372549, 0.09019608, 0.36078432, 1)
+
+[node name="Nuvem" type="Sprite2D" parent="Fundo"]
+position = Vector2(951, 179)
+scale = Vector2(10, 10)
+texture = ExtResource("2_p5few")
+
+[node name="Torres" type="Sprite2D" parent="Fundo"]
+position = Vector2(1150, 700)
+scale = Vector2(10, 10)
+texture = ExtResource("1_b0xvb")
+
+[node name="Aviao" type="Sprite2D" parent="Fundo"]
+position = Vector2(775, 366)
+rotation = 0.34906584
+scale = Vector2(15, 15)
+texture = ExtResource("1_gwxeu")
+script = ExtResource("3_b0xvb")
+
+[node name="Label" type="Label" parent="Fundo"]
+offset_left = 115.0
+offset_top = 275.0
+offset_right = 435.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 38
+text = "Best game:"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 115.0
+offset_top = 100.0
+offset_right = 147.0
+offset_bottom = 116.0
+scale = Vector2(10, 10)
+texture_normal = ExtResource("3_y7txy")
+script = ExtResource("4_hqril")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 115.0
+offset_top = 325.0
+offset_right = 435.0
+offset_bottom = 392.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 48
+text = "000"
+horizontal_alignment = 1
+script = ExtResource("8_w8u27")
+
+[node name="lost" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="lost"]
+position = Vector2(675, 326)
+scale = Vector2(9, 9)
+texture = ExtResource("6_a4x42")
+
+[node name="lost" type="TextureButton" parent="lost"]
+offset_left = 549.0
+offset_top = 353.0
+offset_right = 792.0
+offset_bottom = 452.0
+script = ExtResource("7_tb1jo")
